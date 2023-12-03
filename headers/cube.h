@@ -69,11 +69,7 @@ size_t make_cube(){
                     vertices[faces[i][0]][2] - vertices[faces[i][2]][2]};
       float n[3];
       cross_product(v1, v2, n);
-      // cout << "(" << v1[0] << "," << v1[1] << "," << v1[2] << ")" << "\t"
-      //       << "(" << v2[0] << "," << v2[1] << "," << v2[2] << ")" << "\t"
-      //       << "(" << n[0] << "," << n[1] << "," << n[2] << ")" << "\t"
-      //       << endl;
-      glNormal3fv(n);
+      glNormal3fv(n); // Used for lighting
       for (unsigned j=0; j<4; j++){
         glVertex3fv(vertices[faces[i][j]]);
       }
