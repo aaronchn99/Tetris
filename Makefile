@@ -1,15 +1,15 @@
-LIBDIRS= -L/usr/X11R6/lib
-LDLIBS = -lglut -lGL -lGLU -lX11 -lm
+LIBDIRS= -Lheaders -Llib
+LDLIBS = -llibfreeglut -lopengl32 -lglu32
 
 CPPFLAGS= -O3 -std=c++0x
 LDFLAGS= $(CPPFLAGS) $(LIBDIRS)
 
 TARGETS = tetris
 
-SRCS = tetris.cpp tetromino.h cube.h cross_product.h
+SRCS = tetris.cpp tetromino.h cube.h cross_product.h winstd.h
 
 OBJS =  $(SRCS:.cpp=.o)
 
-CXX = cl
+CXX = g++
 
 default: $(TARGETS)

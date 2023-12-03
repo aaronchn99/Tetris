@@ -23,3 +23,7 @@ Enter the following command:
 - P - Pause/Unpause game
 
 ## Have Fun!!
+
+## Technical specs
+### Dependencies
+- freeglut 3.4.0 (DLL in repo) by Pawel W. Olszta

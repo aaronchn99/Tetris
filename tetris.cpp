@@ -4,8 +4,10 @@
 #include <GL/glut.h>
 #endif
 
-#ifdef _WIN32
-#include "winstd.h"
+#if defined(_WIN32)
+#include "headers/winstd.h"
+#elif defined(_WIN64)
+#include "headers/winstd.h"
 #else
 #include <unistd.h>
 #endif
@@ -19,8 +21,8 @@
 #include <algorithm>
 using namespace std;
 
-#include "cube.h"
-#include "tetromino.h"
+#include "headers/cube.h"
+#include "headers/tetromino.h"
 
 #define PI 3.14159265f
 
